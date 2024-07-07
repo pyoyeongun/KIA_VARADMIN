@@ -1,0 +1,22 @@
+{
+  "_Description-APP_URL": "SERVICE API URL (e.g http://localhost:8080 )",
+  "APP_URL": "http://localhost:8080",
+
+  "_Description-API_TIMEOUT": "HTTP API Timeout(sec) Default 5",
+  "API_TIMEOUT": 5,
+
+  "_Description-ON_PREMISE": "(설치형: true, 클라우드형: false)",
+  "ON_PREMISE": true,
+
+  "_Description-TENANT_NAME": "use Only(ON_PREMISE Type) (e.g furence)",
+  "TENANT_NAME": "kbsec",
+  "ME":"",
+
+  "_Description-LOG_LEVEL": "LOG LEVEL 0 ~ 4 (VERBOSE: 0, DEBUG: 1, INFO: 2, WARN: 3, ERROR: 4) - DEFAULT: 2",
+  "LOG_LEVEL": 1,
+
+  "_Description-ON_PREMISE_CONFIG": "use Only(ON_PREMISE Type) 온프레미스용 RECSEE4.0 옵션",
+  "ON_PREMISE_CONFIG": {
+
+  }
+}
