@@ -1,0 +1,66 @@
+<%@include file="../common/include.jsp" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KIA Admin</title>
+
+    <!-- include -->
+    <script>
+        let $RECSEE;
+    
+      // Load scripts
+        const loadScripts = () => {
+            const scripts = [
+                // "/webjars/jquery/3.7.1/dist/jquery.js",
+                "../../../assets/js/common/ajax.js",
+                "../../../assets/js/common/pagination.js",
+                "../../../assets/js/common/defines.js",
+                "../../../assets/js/common/functions.js",
+            ];
+            scripts.forEach(async (src) => {
+                const script = await document.createElement("script");
+                script.src = src;
+                script.defer = true;
+                document.head.appendChild(script);
+            });
+        };
+    
+      // Init first
+      const initFirst = async () => {
+            // const response = await fetch(window.location.origin + `/../../config/recsee.config.json`);
+            // $RECSEE = await response.json();
+            fetch("../../_html/login/login.html") 
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('include-container').innerHTML = data;
+                
+            })
+            .catch(error => console.error('Error loading include.html:', error));
+            loadScripts();
+        };
+    
+      // Init execution
+        initFirst();
+    </script>
+    
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/common/dialog.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/common/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/common/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/common/pagination.css" />
+    <!-- include -->
+
+</head>
+<!-- Body Start -->
+<body>
+    <div class="appWrap">
+        <app class="pageContainer">
+            <main class="appMain">
+                <div id="include-container"></div>
+            </main>
+        </app>
+    </div>
+</body>
+
+<!-- Body End -->
+</html>

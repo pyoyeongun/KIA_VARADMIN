@@ -1,4 +1,4 @@
-package org.example;
+package com.furence.kia.admin;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
